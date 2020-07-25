@@ -29,6 +29,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.lang.reflect.Field;
+import java.security.PublicKey;
 
 import butterknife.ButterKnife;
 import talex.zsw.basecore.util.ActivityTool;
@@ -527,5 +528,7 @@ public abstract class BaseMVPFragment<T extends _Presenter> extends RxFragment
 	public boolean isVisible;
 	public boolean isPrepared;
 
+	@Subscribe
+	public void onEvent(String event){}
 
 }
